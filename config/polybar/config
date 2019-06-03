@@ -1,4 +1,4 @@
-[bar/white]
+[bar/default]
 
 ;------------;
 ; DIMENSIONS ;
@@ -19,8 +19,8 @@ border-left-size = 10
 ;----------;
 
 bottom = false
-monitor = LVDS-1
-wm-restack = none
+; monitor = eDP1  ; automatically read from MONITOR env var
+; wm-restack = none
 override-redirect = false
 
 ;-------;
@@ -37,7 +37,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 ;--------;
 
 background = rgba(255, 255, 255, .221)  ; #3c3760
-foreground = #c5a9f9
+foreground = #faa3d5
 border-color = rgba(255, 255, 255, .221)  ; #3c3760
 
 ;---------------;
@@ -49,12 +49,12 @@ padding-left = 2
 padding-right = 2
 module-margin = 1.5
 
-modules-left = volume battery mpd
+modules-left = volume battery
 modules-center = i3
 modules-right = wlan cpu date time
 
-tray-position = none
-tray-detached = true
+tray-position = right
+# tray-detached = true
 
 [bar/mpd]
 ;------------;
@@ -122,9 +122,13 @@ pin-workspaces = true
 strip-wsnumbers = true
 enable-scroll = false
 
-label-unfocused-foreground = #a27bea
-label-focused-foreground = #e3d9f4
-label-urgent-foreground = #f4426e
+# label-unfocused-foreground = #e996c4
+;#a27bea
+label-focused-foreground = #fb4f47
+;#fc4757
+;#e3d9f4
+label-urgent-foreground = #fbde49
+;#f4426e
 
 [module/time]
 type = internal/date
@@ -163,7 +167,7 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume>
 format-muted =  0%
@@ -212,7 +216,7 @@ ramp-2 = 
 [module/wlan]
 type = internal/network
 
-interface = wlp4s0
+interface = wlp3s0
 
 interval = 5
 
@@ -231,10 +235,3 @@ label =  %gb_used%
 type = internal/network
 interface = wlp4s0
 label-connected =  %downspeed% |  %upspeed%
-
-[bar/float]
-inherit = bar/white
-
-background = #ffffff
-
-tray-position = center
