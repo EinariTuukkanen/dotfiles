@@ -51,6 +51,7 @@ bindsym $mod+Shift+r restart
 
 # exit i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+f exec i3-nagbar -m "$max_width"
 
 # audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -102,7 +103,6 @@ font pango:Hack 14
 
 # wallpaper
 # exec_always --no-startup-id nitrogen --restore
-# exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/default_wallpaper.jpg
 exec_always --no-startup-id feh --bg-fill $HOME/Pictures/default_wallpaper.png
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
@@ -118,15 +118,17 @@ for_window [class="^.*"] border pixel 0
 # client.urgent           	#		#		#		#		#
 # client.background 		#
 
-
+client.focused #fa414b #fa414b #fa414b #fa414b #fa414b
 
 # STARTUP APPLICATIONS
 
 # dropdown terminal
+set_from_resource $resolution URxvt.dropdown.size
 bindsym F1 scratchpad show
-bindsym $mod+e exec --no-startup-id urxvt -pe tabbedex -name urxvt_scratchpad
-exec --no-startup-id urxvt -name urxvt_scratchpad
-for_window [instance="urxvt_scratchpad"] floating enable, resize set 1920px 300px, move position 0px 0px, move scratchpad, sticky enable, border pixel 1px
+bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [90]#282a36 -name urxvt_scratchpad
+exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [90]#282a36 -name urxvt_scratchpad
+for_window [instance="urxvt_scratchpad"] floating enable, move position 0px 0px, move scratchpad, sticky enable, border pixel 4px
+# for_window [instance="urxvt_scratchpad"] floating enable, resize set 2560px 300px, move position 0px 0px, move scratchpad, sticky enable, border pixel 1px
 
 # application launcher
 set $execute exec rofi -show drun
