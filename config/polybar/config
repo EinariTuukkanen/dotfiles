@@ -20,6 +20,7 @@ border-left-size = 10
 
 bottom = false
 ; monitor = eDP1  ; automatically read from MONITOR env var
+monitor = ${env:MONITOR:}
 ; wm-restack = none
 override-redirect = false
 
@@ -122,7 +123,7 @@ pin-workspaces = true
 strip-wsnumbers = true
 enable-scroll = false
 
-# label-unfocused-foreground = #e996c4
+# label-unfocused-foreground = #faa3d5
 ;#a27bea
 label-focused-foreground = #fb4f47
 ;#fc4757

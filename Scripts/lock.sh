@@ -12,9 +12,10 @@ i3lock \
 --ringvercolor=$c4	\
 --insidewrongcolor=$c0	\
 --ringwrongcolor=$c3	\
+--ignore-empty-password \
 \
 --insidecolor=$c0	\
---ringcolor=$c0		\
+--ringcolor=$c4		\
 --separatorcolor=$c0	\
 --linecolor=$c0		\
 \
@@ -23,17 +24,24 @@ i3lock \
 --keyhlcolor=$c5	\
 --bshlcolor=$c5		\
 \
---blur 5                \
---clock                 \
+--blur 10               \
+--force-clock                 \
 --indicator             \
---radius 180		\
---ring-width 10		\
+--radius 25		\
+--ring-width 3		\
 --timestr="%H:%M"	\
 --datestr="%A, %B %d."	\
 \
---veriftext=""			\
---wrongtext=""			\
---timesize=80			\
---datesize=20			\
-
-
+--veriftext="Wait"			\
+--wrongtext="F"			\
+--timesize=40			\
+--datesize=10			\
+--indpos="100:h-100" \
+--datepos="220:h-75" \
+--timepos="220:h-90" \
+--verifsize=20
+# --time-font="Font Awesome 5 Free" \
+# --date-font="Font Awesome 5 Free" \
+# --layout-font="Font Awesome 5 Free" \
+# --verif-font="Font Awesome 5 Free" \
+# --wrong-font="Font Awesome 5 Free" \

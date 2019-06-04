@@ -72,7 +72,8 @@ bindsym $mod+Tab exec --no-startup-id urxvt -name floating
 bindsym Print exec --no-startup-id flameshot gui
 
 # lock i3
-# bindsym $mod+l exec --no-startup-id ~/Scripts/lock.sh
+bindsym $mod+l exec --no-startup-id $HOME/dotfiles/Scripts/lock.sh
+
 
 # bindsym $mod+o gaps outer current set 10; gaps inner current set 30
 # bindsym $mod+i gaps outer current set 0; gaps inner current set 10
@@ -81,10 +82,10 @@ bindsym Print exec --no-startup-id flameshot gui
 bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym Left resize grow width 10 px or 10 ppt
-        bindsym Right resize shrink width 10 px or 10 ppt
-        bindsym Up resize grow height 10 px or 10 ppt
-        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 1 ppt
+        bindsym Left resize shrink width 10 px or 1 ppt
+        bindsym Up resize grow height 10 px or 1 ppt
+        bindsym Down resize shrink height 10 px or 1 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -101,7 +102,8 @@ font pango:Hack 14
 
 # wallpaper
 # exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/default_wallpaper.jpg
+# exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/default_wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/default_wallpaper.png
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
 
@@ -129,7 +131,7 @@ for_window [instance="urxvt_scratchpad"] floating enable, resize set 1920px 300p
 # application launcher
 set $execute exec rofi -show drun
 bindsym F2 $execute
-bindsym $mod+F2 exec rofi -show run -eh 2 -padding 16
+# bindsym $mod+F2 exec rofi -show run -eh 2 -padding 16
 
 # top bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -140,6 +142,8 @@ exec_always --no-startup-id compton --respect-prop-shadow --config $HOME/.config
 # configs (urxvt style etc.)
 exec_always --no-startup-id xrdb $HOME/.Xresources
 
+# applet tray
+exec_always --no-startup-id nm-applet
 
 
 # WORKSPACES
