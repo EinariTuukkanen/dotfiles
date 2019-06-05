@@ -75,6 +75,9 @@ bindsym Print exec --no-startup-id flameshot gui
 # lock i3
 bindsym $mod+l exec --no-startup-id $HOME/dotfiles/Scripts/lock.sh
 
+# switch between built-in and external monitor
+bindsym $mod+o exec xrandr --output eDP1 --auto
+bindsym $mod+p exec xrandr --output eDP1 --off --output HDMI1 --auto
 
 # bindsym $mod+o gaps outer current set 10; gaps inner current set 30
 # bindsym $mod+i gaps outer current set 0; gaps inner current set 10
