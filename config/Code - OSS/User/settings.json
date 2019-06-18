@@ -27,9 +27,11 @@
   "vscode_custom_css.policy": true,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.codeLens.enabled": false,
-  "gitlens.hovers.enabled": false,
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#003049",
     "editor.selectionHighlightBackground": "#003049"
   },
+  "gitlens.hovers.enabled": false,
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "none",
 }
