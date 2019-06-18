@@ -1,0 +1,35 @@
+{
+  "workbench.colorTheme": "1984 - Fancy",
+  "window.zoomLevel": 0,
+  "editor.rulers": [80],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "extensions.ignoreRecommendations": false,
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "files.associations": {
+    "*.tmpl": "html"
+  },
+  "html.autoClosingTags": false,
+  "window.menuBarVisibility": "toggle",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Set the default
+  "editor.formatOnSave": false,
+  "editor.fontFamily": "'Hack', 'monospace', monospace, 'Droid Sans Fallback'",
+  "debug.console.fontFamily": "'Hack",
+  "vscode_custom_css.imports": [
+    "file:///home/einari/dotfiles/css/vscode-glow-text.css"
+  ],
+  "vscode_custom_css.policy": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#003049",
+    "editor.selectionHighlightBackground": "#003049"
+  },
+}

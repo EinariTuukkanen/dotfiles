@@ -69,7 +69,7 @@ URxvt.font: xft:Hack:size=10, xft:Font Awesome 5 Free Solid:size=10
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [100]#282a36
+URxvt.background:                 [90]#0d0f31
 ! URxvt.background:                 [75]#000000
 ! URxvt.background: rgba:0000/0000/0200/AFC8
 URxvt*scrollBar:                  false

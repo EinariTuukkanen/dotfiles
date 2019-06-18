@@ -129,8 +129,8 @@ client.focused #fa414b #fa414b #fa414b #fa414b #fa414b
 # dropdown terminal
 set_from_resource $resolution URxvt.dropdown.size
 bindsym F1 scratchpad show
-bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [30]#282a36 -name urxvt_scratchpad
-exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [30]#282a36 -name urxvt_scratchpad
+bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [80]#000000 -name urxvt_scratchpad
+exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [80]#000000 -name urxvt_scratchpad
 for_window [instance="urxvt_scratchpad"] floating enable, move position 0px 0px, move scratchpad, sticky enable, border pixel 4px
 # for_window [instance="urxvt_scratchpad"] floating enable, resize set 2560px 300px, move position 0px 0px, move scratchpad, sticky enable, border pixel 1px
 
