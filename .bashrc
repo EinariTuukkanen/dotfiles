@@ -69,13 +69,13 @@ working_directory() {
     # workingdir="$dir"
     # fi
 
-    echo -e "${BGREEN}$workingdir${COLOREND}"
+    echo -e "${BBLUE}$workingdir${COLOREND}"
 }
 
 parse_remote_state() {
     remote_state=$(git status -sb 2> /dev/null | grep -oh "\[.*\]")
     if [[ "$remote_state" != "" ]]; then
-        out="${BYELLOW}[${COLOREND}"
+        out="${BBLUE}[${COLOREND}"
 
         if [[ "$remote_state" == *ahead* ]] && [[ "$remote_state" == *behind* ]]; then
             behind_num=$(echo "$remote_state" | grep -oh "behind [0-9]*" | grep -oh "[0-9]*$")
@@ -89,7 +89,7 @@ parse_remote_state() {
             out="$out${RED}$behind_num${COLOREND}"
         fi
 
-        out="$out${BYELLOW}]${COLOREND}"
+        out="$out${BBLUE}]${COLOREND}"
         echo " $out"
     fi
 }
@@ -113,7 +113,7 @@ prompt() {
     fi
     history -a
     history -n
-    PS1="${BGREEN}[$(working_directory)$(parse_git_branch)${BGREEN}]$(parse_remote_state) $exit_status"
+    PS1="${BBLUE}[$(working_directory)$(parse_git_branch)${BBLUE}]$(parse_remote_state) $exit_status"
     # PS1="$(working_directory)$(parse_git_branch)$(parse_remote_state)$(parse_stash_state) $exit_status"
 }
 
