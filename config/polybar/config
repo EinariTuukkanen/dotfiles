@@ -1,3 +1,22 @@
+[colors]
+bg = ${xrdb:background}
+fg = ${xrdb:foreground}
+c1 = ${xrdb:color1}
+c2 = ${xrdb:color2}
+c3 = ${xrdb:color3}
+c4 = ${xrdb:color4}
+c5 = ${xrdb:color5}
+c6 = ${xrdb:color6}
+c7 = ${xrdb:color7}
+c8 = ${xrdb:color8}
+c9 = ${xrdb:color9}
+c10 = ${xrdb:color10}
+c11 = ${xrdb:color11}
+c12 = ${xrdb:color12}
+c13 = ${xrdb:color13}
+c14 = ${xrdb:color14}
+c15 = ${xrdb:color15}
+
 [bar/default]
 
 ;------------;
@@ -18,11 +37,13 @@ border-left-size = 10
 ; LOCATION ;
 ;----------;
 
-bottom = false
-; monitor = eDP1  ; automatically read from MONITOR env var
+; automatically read from MONITOR env var
+; monitor = eDP1 
 monitor = ${env:MONITOR:}
-; wm-restack = none
+
+bottom = false
 override-redirect = false
+; wm-restack = none
 
 ;-------;
 ; FONTS ;
@@ -37,9 +58,9 @@ font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 ; COLORS ;
 ;--------;
 
-background = rgba(255, 255, 255, .221)  ; #3c3760
-foreground = #faa3d5
-border-color = rgba(255, 255, 255, .221)  ; #3c3760
+background = rgb(255, 255, 255, .221)
+foreground = ${colors.fg}
+border-color = rgba(255, 255, 255, .221)
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -57,61 +78,6 @@ modules-right = wlan cpu date time
 tray-position = right
 # tray-detached = true
 
-[bar/mpd]
-;------------;
-; DIMENSIONS ;
-;------------;
-
-width = 100%
-height = 20
-offset-y = 0
-offset-x = 0
-
-border-top-size = 10
-border-bottom-size = 0
-border-right-size = 10
-border-left-size = 10
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = true
-monitor = eDP-1
-wm-restack = none
-override-redirect = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = Hack:size=10;3
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;3"
-
-;--------;
-; COLORS ;
-;--------;
-
-background = 0
-foreground = #c5a9f9
-border-color = 0
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-fixed-center = true
-padding-left = 2 
-padding-right = 2
-module-margin = 1.5
-
-;modules-left = 
-modules-center = mpd
-;modules-right = 
-
-
 ;---------;
 ; MODULES ;
 ;---------;
@@ -123,23 +89,21 @@ pin-workspaces = true
 strip-wsnumbers = true
 enable-scroll = false
 
-# label-unfocused-foreground = #faa3d5
-;#a27bea
-label-focused-foreground = #fb4f47
-;#fc4757
-;#e3d9f4
-label-urgent-foreground = #fbde49
-;#f4426e
+; label-unfocused-foreground = ${colors.fg}
+label-focused-foreground = ${colors.c4}
+label-urgent-foreground = ${colors.c2}
+
 
 [module/time]
 type = internal/date
 
 interval = 1.0
-
 date =  %H:%M:%S
+
 
 [module/date]
 type = internal/date
+
 date =  %e %B - %A
 label = %date%
 
@@ -148,9 +112,7 @@ label = %date%
 type = internal/battery
 
 battery = BAT1
-
 poll-interval = 1
-
 full-at = 95
 
 label-discharging = %percentage%%
@@ -167,6 +129,7 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
+
 [module/volume]
 type = internal/alsa
 
@@ -176,6 +139,7 @@ format-muted =  0%
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
 
 [module/mpd]
 type = internal/mpd
@@ -199,38 +163,40 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
+
 [module/backlight]
 type = internal/backlight
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = acpi_video0
-
 format = <ramp> <label>
-
 label = %percentage%%
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 
+
 [module/wlan]
 type = internal/network
 
 interface = wlp3s0
-
 interval = 5
 
 label-connected =  %essid%
 label-disconnected =  Not Connected
 
+
 [module/cpu]
 type = internal/cpu
 label =  %percentage%%
 
+
 [module/memory]
 type = internal/memory
 label =  %gb_used%
+
 
 [module/network]
 type = internal/network
