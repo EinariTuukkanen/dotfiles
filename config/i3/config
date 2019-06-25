@@ -1,3 +1,25 @@
+# INIT
+
+set_from_resource $fg foreground
+set_from_resource $bg background
+set_from_resource $c0 color0
+set_from_resource $c1 color1
+set_from_resource $c2 color2
+set_from_resource $c3 color3
+set_from_resource $c4 color4
+set_from_resource $c5 color5
+set_from_resource $c6 color6
+set_from_resource $c7 color7
+set_from_resource $c8 color8
+set_from_resource $c9 color9
+set_from_resource $c10 color10
+set_from_resource $c11 color11
+set_from_resource $c12 color12
+set_from_resource $c13 color13
+set_from_resource $c14 color14
+set_from_resource $c15 color15
+
+
 # GENERAL
 
 set $mod Mod4
@@ -107,7 +129,7 @@ font pango:Hack 14
 # wallpaper
 # exec_always --no-startup-id nitrogen --restore
 # 2, 4
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/cyberpunk4.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/gradientdots2.jpg
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
 
@@ -122,15 +144,13 @@ for_window [class="^.*"] border pixel 0
 # client.urgent           	#		#		#		#		#
 # client.background 		#
 
-client.focused #fa414b #fa414b #fa414b #fa414b #fa414b
-
 # STARTUP APPLICATIONS
 
 # dropdown terminal
 set_from_resource $resolution URxvt.dropdown.size
 bindsym F1 scratchpad show
-bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [80]#000000 -name urxvt_scratchpad
-exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [80]#000000 -name urxvt_scratchpad
+bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [95]$bg -name urxvt_scratchpad
+exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [95]$bg -name urxvt_scratchpad
 for_window [instance="urxvt_scratchpad"] floating enable, move position 0px 0px, move scratchpad, sticky enable, border pixel 4px
 # for_window [instance="urxvt_scratchpad"] floating enable, resize set 2560px 300px, move position 0px 0px, move scratchpad, sticky enable, border pixel 1px
 

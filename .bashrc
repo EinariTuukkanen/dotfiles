@@ -24,9 +24,9 @@ parse_git_branch() {
 
     if [[ $branch != "" ]]; then
         if [[ $(git status 2> /dev/null | tail -n1) == "nothing to commit, working tree clean" ]]; then
-            echo " ${BWHITE}$branch${COLOREND}"
+            echo " ${WHITE}$branch${COLOREND}"
         else
-            echo " ${BRED}$branch${COLOREND}"
+            echo " ${RED}$branch${COLOREND}"
         fi
     fi
 }
@@ -40,34 +40,34 @@ working_directory() {
         in_home=1
     fi
 
-    workingdir=""
-    if [[ `tput cols` -lt 110 ]]; then
-        first="/`echo $dir | cut -d / -f 2`"
-        letter=${first:0:2}
-        if [[ $in_home == 1 ]]; then
-            letter="~$letter"
-        fi
+    # workingdir=""
+    # if [[ `tput cols` -lt 110 ]]; then
+    #     first="/`echo $dir | cut -d / -f 2`"
+    #     letter=${first:0:2}
+    #     if [[ $in_home == 1 ]]; then
+    #         letter="~$letter"
+    #     fi
 
-        proj=`echo $dir | cut -d / -f 3`
-        beginning="$letter/$proj"
-        end=`echo "$dir" | rev | cut -d / -f1 | rev`
+    #     proj=`echo $dir | cut -d / -f 3`
+    #     beginning="$letter/$proj"
+    #     end=`echo "$dir" | rev | cut -d / -f1 | rev`
 
-        if [[ $proj == "" ]]; then
-            workingdir="$dir"
-        elif [[ $proj == "~" ]]; then
-            workingdir="$dir"
-        elif [[ $dir =~ "$first/$proj"$ ]]; then
-            workingdir="$beginning"
-        elif [[ $dir =~ "$first/$proj/$end"$ ]]; then
-            workingdir="$beginning/$end"
-        else
-            workingdir="$beginning/…/$end"
-        fi
-    else
-		end=`echo "$dir" | rev | cut -d / -f1 | rev`
-        workingdir="$end"
-        # workingdir="$dir"
-    fi
+    #     if [[ $proj == "" ]]; then
+    #         workingdir="$dir"
+    #     elif [[ $proj == "~" ]]; then
+    #         workingdir="$dir"
+    #     elif [[ $dir =~ "$first/$proj"$ ]]; then
+    #         workingdir="$beginning"
+    #     elif [[ $dir =~ "$first/$proj/$end"$ ]]; then
+    #         workingdir="$beginning/$end"
+    #     else
+    #         workingdir="$beginning/…/$end"
+    #     fi
+    # else
+    end=`echo "$dir" | rev | cut -d / -f1 | rev`
+    workingdir="$end"
+    # workingdir="$dir"
+    # fi
 
     echo -e "${BGREEN}$workingdir${COLOREND}"
 }

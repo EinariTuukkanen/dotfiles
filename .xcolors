@@ -1,0 +1,72 @@
+
+!  RAIJU
+#define FOREGROUND  #d4d4d4
+#define BACKGROUND  #1b2432
+
+! black
+#define COLOR0  #6f7899
+#define COLOR8  #6f7899
+
+! red
+#define COLOR1  #a188f1
+#define COLOR9  #a188f1
+
+! green
+#define COLOR2  #7ebbbb
+#define COLOR10 #7ebbbb
+
+! yellow
+#define COLOR3  #ffedcb
+#define COLOR11 #ffedcb
+
+! blue
+#define COLOR4  #8d9ad1
+#define COLOR12 #8d9ad1
+
+! magenta
+#define COLOR5  #ceb3f7
+#define COLOR13 #ceb3f7
+
+! cyan
+#define COLOR6  #a7a7ee
+#define COLOR14 #a7a7ee
+
+! white
+#define COLOR7  #d7e2ff
+#define COLOR15 #d7e2ff
+
+!  ORIGINAL
+!  #define FOREGROUND #F7EFED
+!  #define BACKGROUND #1b2f39
+!  
+!  ! Black (dark/light)
+!  #define COLOR0  #1c1c1c
+!  #define COLOR8  #262626
+!  
+!  ! Red (dark/light)
+!  #define COLOR1  #EF3D59
+!  #define COLOR9  #EF3D59
+!  
+!  ! Green (dark/light)
+!  #define COLOR2  #4AB19D
+!  #define COLOR10 #4AB19D
+!  
+!  ! Yellow (dark/light)
+!  #define COLOR3  #EFC958
+!  #define COLOR11 #EFC958
+!  
+!  ! Blue (dark/light)
+!  #define COLOR4  #808080
+!  #define COLOR12 #808080
+!  
+!  ! Magenta (dark/light)
+!  #define COLOR5  #E17A47
+!  #define COLOR13 #E17A47
+!  
+!  ! Cyan (dark/light)
+!  #define COLOR6  #cccccc 
+!  #define COLOR14 #cccccc
+!  
+!  ! White (dark/light)
+!  #define COLOR7  #FFFFFF
+!  #define COLOR15 #FFFFFF
