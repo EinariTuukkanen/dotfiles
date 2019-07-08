@@ -37,5 +37,5 @@
 
 #element selected {
     /* text-color: rgb(251, 79, 71); */
-    background-color: rgba(200, 200, 200, 0.25);
+    background-color: rgba(141, 154, 209, 0.25);
 }

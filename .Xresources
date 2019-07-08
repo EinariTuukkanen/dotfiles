@@ -1,7 +1,9 @@
 #include "/home/einari/.xcolors"
 
 #define DROPDOWN_SIZE $(/home/einari/dotfiles/scripts/get_max_width.sh)
+#define MAIN_MONITOR $(/home/einari/dotfiles/scripts/get_main_monitor.sh)
 URxvt.dropdown.size:     DROPDOWN_SIZE
+URxvt.monitor.name:      MAIN_MONITOR
 
 rofi.vars.textColor:              COLOR4
 rofi.vars.highlightColor:         COLOR8

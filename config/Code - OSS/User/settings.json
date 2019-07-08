@@ -19,7 +19,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // Set the default
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.fontFamily": "Hack",
   // "editor.fontFamily": "'Hack', 'monospace', monospace, 'Droid Sans Fallback'",
   "debug.console.fontFamily": "Hack",
@@ -41,4 +41,10 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "workbench.iconTheme": "city-lights-icons-vsc",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "[python]": {
+    "editor.tabSize": 4
+  }
 }

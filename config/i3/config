@@ -19,6 +19,9 @@ set_from_resource $c13 color13
 set_from_resource $c14 color14
 set_from_resource $c15 color15
 
+set_from_resource $resolution URxvt.dropdown.size
+set_from_resource $monitor URxvt.monitor.name
+
 
 # GENERAL
 
@@ -99,7 +102,7 @@ bindsym $mod+l exec --no-startup-id $HOME/dotfiles/Scripts/lock.sh
 
 # switch between built-in and external monitor
 bindsym $mod+o exec xrandr --output eDP1 --auto
-bindsym $mod+p exec xrandr --output eDP1 --off --output HDMI1 --auto
+bindsym $mod+p exec xrandr --output eDP1 --off --output $monitor --auto
 
 # bindsym $mod+o gaps outer current set 10; gaps inner current set 30
 # bindsym $mod+i gaps outer current set 0; gaps inner current set 10
@@ -129,7 +132,7 @@ font pango:Hack 14
 # wallpaper
 # exec_always --no-startup-id nitrogen --restore
 # 2, 4
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/gradientdots2.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/planet.png
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
 
@@ -147,7 +150,6 @@ for_window [class="^.*"] border pixel 0
 # STARTUP APPLICATIONS
 
 # dropdown terminal
-set_from_resource $resolution URxvt.dropdown.size
 bindsym F1 scratchpad show
 bindsym $mod+e exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [95]$bg -name urxvt_scratchpad
 exec --no-startup-id urxvt -geometry $resolution -internalBorder 20 -background [95]$bg -name urxvt_scratchpad
