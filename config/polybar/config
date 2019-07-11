@@ -58,9 +58,9 @@ font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 ; COLORS ;
 ;--------;
 
-background = rgb(255, 255, 255, .221)
+background = #00323f57
 foreground = ${colors.fg}
-border-color = rgba(255, 255, 255, .221)
+border-color = #00323f57
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -78,6 +78,9 @@ modules-right = wlan cpu date time
 tray-position = right
 # tray-detached = true
 
+[settings]
+pseudo-transparency = true
+
 ;---------;
 ; MODULES ;
 ;---------;
@@ -92,6 +95,8 @@ enable-scroll = false
 ; label-unfocused-foreground = ${colors.fg}
 label-focused-foreground = ${colors.c4}
 label-urgent-foreground = ${colors.c2}
+
+pseudo-transparency = true
 
 
 [module/time]

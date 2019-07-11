@@ -165,7 +165,7 @@ bindsym F2 $execute
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # transparency
-exec_always --no-startup-id compton --respect-prop-shadow --config $HOME/.config/compton/compton.conf
+# exec_always --no-startup-id compton --respect-prop-shadow --config $HOME/.config/compton/compton.conf
 
 # configs (urxvt style etc.)
 exec_always --no-startup-id xrdb $HOME/.Xresources
