@@ -1,0 +1,33 @@
+swipe:
+  3:
+    left:
+      command: "xdotool key alt+Left"
+    right:
+      command: "xdotool key alt+Right"
+    up:
+      command: "xdotool key ctrl+Page_Up"
+      interval: 0.3
+      threshold: 0.3
+    down:
+      command: "xdotool key ctrl+Page_Down"
+      interval: 0.3
+      threshold: 0.3
+  4:
+    up:
+      command: "xdotool key super+ctrl+Page_Up"
+      interval: 0.3
+      threshold: 0.3
+    down:
+      command: "xdotool key super+ctrl+Page_Down"
+      interval: 0.3
+      threshold: 0.3
+pinch:
+  3:
+    in:
+      command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+      interval: 0.3
+      threshold: 0.3
+    out:
+      command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+      interval: 0.3
+      threshold: 0.3

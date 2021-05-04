@@ -1,8 +1,0 @@
-rofi.kb-cancel: F2
-rofi.display-drun: >
-rofi.font: Hack 10
-rofi.xoffset: 140
-rofi.yoffset: 7
-rofi.width: 300
-
-rofi.theme: /home/einari/.config/rofi/custom-dmenu.rasi

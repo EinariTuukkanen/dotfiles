@@ -1,12 +1,10 @@
 #
 # ~/.bash_profile
 #
+PATH="$PATH:/root/.gem/ruby/2.7.0/bin"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval `ssh-agent -s`
-  ssh-add ~/.ssh/id_rsa
-  ssh-add ~/.ssh/id_rsa_auron
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  startx
 fi
-

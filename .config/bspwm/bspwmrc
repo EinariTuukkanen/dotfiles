@@ -1,0 +1,49 @@
+#! /bin/sh
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+bspc config border_width          1
+bspc config window_gap            12
+bspc config split_ratio           0.52
+
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+
+bspc config normal_border_color   "#6f211f"
+bspc config focused_border_color  "#dd625d"
+
+# Set app specific desktops
+# Note: classes can be checked with xprop
+bspc rule -a Chromium desktop='^2'
+bspc rule -a code-oss desktop='^3'
+bspc rule -a TelegramDesktop desktop='^4'
+bspc rule -a slack desktop='^4'
+bspc rule -a Thunar desktop='^5'
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Screenkey manage=off
+
+# Dropdown terminal
+monitor_width=`~/.config/scripts/get_monitor_width.sh`
+dropdown_width=1920
+if [ $((monitor_width)) -lt $((dropdown_width)) ]; then
+  dropdown_width=$((monitor_width))
+fi
+x_offset=0
+if [ $((monitor_width)) -gt $((dropdown_width)) ]; then
+  x_offset=$(((monitor_width - dropdown_width)/2))
+fi
+bspc rule -a dropdown sticky=on state=floating hidden=on rectangle=$((dropdown_width - 2))x360+"$x_offset"+32 border=on
+~/.config/scripts/kill_by_class.sh dropdown
+kitty --class dropdown &
+
+# Keybindings
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
+
+# Top bar
+~/.config/polybar/launch.sh &
+
+# Wallpaper
+xsetroot -solid "#161014"
