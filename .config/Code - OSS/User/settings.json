@@ -1,0 +1,38 @@
+{
+  "editor.rulers": [
+    80
+  ],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "workbench.statusBar.visible": true,
+  "window.menuBarVisibility": "toggle",
+  "vetur.validation.templateProps": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "vetur.experimental.templateInterpolationService": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.useWorkspaceDependencies": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.workingDirectories": [
+    {"mode": "auto"},
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Neofloss",
+  "workbench.iconTheme": "neofloss-icons"
+}
