@@ -1,0 +1,3 @@
+google-chrome
+i3lock-color
+ttf-font-awesome-4

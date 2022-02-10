@@ -4,9 +4,9 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval `ssh-agent -s`
-  ssh-add ~/.ssh/id_rsa
-  ssh-add ~/.ssh/id_rsa_auron
-fi
+# export PATH="$PATH:/root/.local/share/gem/ruby/3.0.0/bin"
+# export PATH="$HOME/.poetry/bin:$PATH"
 
+# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#  startx
+# fi

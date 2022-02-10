@@ -1,72 +1,36 @@
+#define BACKGROUND  #161014
+#define FOREGROUND  #c15653
 
-!  RAIJU
-#define FOREGROUND  #d4d4d4
-#define BACKGROUND  #1b2432
+! dark / light
 
 ! black
-#define COLOR0  #6f7899
-#define COLOR8  #6f7899
+#define COLOR0      #4f2729
+#define COLOR8      #6b3333
 
 ! red
-#define COLOR1  #a188f1
-#define COLOR9  #a188f1
+#define COLOR1      #ff6666
+#define COLOR9      #F86564
 
 ! green
-#define COLOR2  #7ebbbb
-#define COLOR10 #7ebbbb
+#define COLOR2      #50d292
+#define COLOR10     #6CBC87
 
 ! yellow
-#define COLOR3  #ffedcb
-#define COLOR11 #ffedcb
+#define COLOR3      #f7d15a
+#define COLOR11     #F2BB5B
 
 ! blue
-#define COLOR4  #8d9ad1
-#define COLOR12 #8d9ad1
+#define COLOR4      #418cd7
+#define COLOR12     #6084BF
 
 ! magenta
-#define COLOR5  #ceb3f7
-#define COLOR13 #ceb3f7
+#define COLOR5      #cb6bff
+#define COLOR13     #CF69DF
 
 ! cyan
-#define COLOR6  #a7a7ee
-#define COLOR14 #a7a7ee
+#define COLOR6      #81cdd3
+#define COLOR14     #93B8BB
 
 ! white
-#define COLOR7  #d7e2ff
-#define COLOR15 #d7e2ff
-
-!  ORIGINAL
-!  #define FOREGROUND #F7EFED
-!  #define BACKGROUND #1b2f39
-!  
-!  ! Black (dark/light)
-!  #define COLOR0  #1c1c1c
-!  #define COLOR8  #262626
-!  
-!  ! Red (dark/light)
-!  #define COLOR1  #EF3D59
-!  #define COLOR9  #EF3D59
-!  
-!  ! Green (dark/light)
-!  #define COLOR2  #4AB19D
-!  #define COLOR10 #4AB19D
-!  
-!  ! Yellow (dark/light)
-!  #define COLOR3  #EFC958
-!  #define COLOR11 #EFC958
-!  
-!  ! Blue (dark/light)
-!  #define COLOR4  #808080
-!  #define COLOR12 #808080
-!  
-!  ! Magenta (dark/light)
-!  #define COLOR5  #E17A47
-!  #define COLOR13 #E17A47
-!  
-!  ! Cyan (dark/light)
-!  #define COLOR6  #cccccc 
-!  #define COLOR14 #cccccc
-!  
-!  ! White (dark/light)
-!  #define COLOR7  #FFFFFF
-!  #define COLOR15 #FFFFFF
+#define COLOR7      #c15653
+#define COLOR15     #dd625d
