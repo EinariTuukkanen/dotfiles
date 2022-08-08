@@ -2,7 +2,7 @@
 
 # Switches monitor to external if param 'ext' is given.
 # Otherwise switches back to internal monitor.
-defaultMonitor=$(source ~/.config/scripts/get_default_monitor.sh)
+defaultMonitor=$(source ~/.scripts/get_default_monitor.sh)
 
 secondaryDesktopName="Secondary"
 

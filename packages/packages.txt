@@ -1,3 +1,4 @@
+archlinux-keyring
 bspwm
 code
 docker
@@ -20,4 +21,32 @@ ruby
 sxhkd
 ufw
 wget
-yay
+ttf-fira-code
+ttf-font-awesome
+ttf-iosevka-nerd
+xorg-server
+xorg-xinit
+xorg-xsetroot
+xdotool
+xorg-xrandr
+xorg-xkill
+
+python
+python-pip
+openssh
+linux-firmware
+xf86-input-libinput
+
+
+# rust alternatives for shell tools
+the_silver_searcher
+fd
+procs
+bat
+
+# backlight
+light
+
+# notifications
+libnotify
+dunst

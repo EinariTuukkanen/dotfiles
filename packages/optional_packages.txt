@@ -1,0 +1,5 @@
+
+jupyter-notebook
+npm
+nodejs
+apache-jena-fuseki

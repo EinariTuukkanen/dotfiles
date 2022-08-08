@@ -3,7 +3,7 @@
 # Returns external monitor if one is connected.
 # Otherwise returns the default monitor.
 
-defaultMonitor=$(source ~/.config/scripts/get_default_monitor.sh)
+defaultMonitor=$(source ~/.scripts/get_default_monitor.sh)
 monitor=$defaultMonitor  # Default (built-in) monitor
 
 if type "xrandr" > /dev/null; then

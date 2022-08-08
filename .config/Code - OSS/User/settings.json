@@ -1,4 +1,5 @@
 {
+  "rust-client.rustupPath": "/home/*USER*/.cargo/bin/rustup",
   "editor.rulers": [80],
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.tabSize": 2,
@@ -102,7 +103,12 @@
       "stash": true
     }
   },
-  "python.formatting.provider": "black",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "100",
+    "--experimental"
+  ],
+  "python.formatting.blackArgs": ["--line-length", "100"],
   "workbench.editor.untitled.hint": "hidden",
   "latex-workshop.view.pdf.viewer": "tab",
   "python.dataScience.askForKernelRestart": false,
@@ -116,5 +122,6 @@
       "passphrase": "masters",
       "root": "/root"
     }
-  ]
+  ],
+  "python.formatting.provider": "black"
 }

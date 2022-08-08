@@ -4,48 +4,45 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	kitty
-
-super + shift + Return
-	kitty --class peek
-
-# program launcher
-# super + @space
-# 	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd; notify-send "sxhkd reloaded" -t 1000
 
+# terminal emulator
+super + Return
+	kitty
+
+# tiny terminal
+super + shift + Return
+	kitty --class peek
+
 # lockscreen
 super + l
-    ~/.config/scripts/lock.sh
+    ~/.scripts/lock.sh
 
 # swap monitors
 super + {o,p}
-    ~/.config/scripts/swap_monitor.sh {_,ext}
+    ~/.scripts/swap_monitor.sh {_,ext}
 
 # brightness up
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	light -A 10
 
 # brightness down
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	light -U 10
 
 # volume up
 XF86AudioRaiseVolume 
-	amixer set Master 1%+
+	pactl -- set-sink-volume 0 +5%
 
 # volume down
 XF86AudioLowerVolume 
-	amixer set Master 1%-
+	pactl -- set-sink-volume 0 -5%
 
 # volume toggle mute
 XF86AudioMute 
-	amixer set Master toggle
+	pactl set-sink-mute 0 toggle
 
 # print screen
 Print
@@ -53,11 +50,12 @@ Print
 
 # dropdown terminal
 F1
-  ~/.config/scripts/toggle_scratchpad.sh dropdown
+	~/.scripts/toggle_scratchpad.sh dropdown
 
 # rofi
 F2
 	~/.config/polybar/scripts/menu
+
 
 #
 # bspwm hotkeys
@@ -75,10 +73,6 @@ super + {_,shift + }q
 F11
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-# super + y
-# 	bspc node newest.marked.local -n newest.!automatic.local
-
 # swap the current node and the biggest window
 super + g
 	bspc node -s biggest.local
@@ -87,21 +81,39 @@ super + g
 super + ctrl + {Prior,Next}
 	bspc desktop -f {prev,next}.local
 
+# send the newest marked node to the newest preselected node
+# super + y
+# 	bspc node newest.marked.local -n newest.!automatic.local
+
+
 #
 # state/flags
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + t,f}
+	bspc node -t {tiled,pseudo_tiled,floating}
 
 # set the node flags
 # super + ctrl + {m,x,y,z}
 # 	bspc node -g {marked,locked,sticky,private}
 
+
 #
 # focus/swap
 #
+
+# focus the next/previous window in the current desktop
+super + {Right,Left}
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0,plus}
+	bspc {desktop -f,node -d} '{1-9,0,Secondary}'
+
+# alt tab back and forth
+alt + Tab
+	bspc desktop -f last
 
 # focus the node in the given direction
 # super + {_,shift + }{h,j,k,l}
@@ -110,10 +122,6 @@ super + {t,shift + t,s,f}
 # focus the node for the given path jump
 # super + {p,b,comma,period}
 # 	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 # super + bracket{left,right}
@@ -129,13 +137,6 @@ super + {_,shift + }c
 # 	bspc node {older,newer} -f; \
 # 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0,plus}
-	bspc {desktop -f,node -d} '{1-9,0,Secondary}'
-
-# alt tab back and forth
-alt + Tab
-	bspc desktop -f last
 
 #
 # preselect
@@ -154,8 +155,8 @@ super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+# super + ctrl + shift + space
+# 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -174,11 +175,14 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
+#
 # ducky like mouse movement
+#
 
 # move mouse cursor
 hyper + {w,a,s,d}
 	xdotool mousemove_relative {-- 0 -20, -- -20 0, 0 20, 20 0}
+
 # clicks
 hyper + {q,e,r,f}
 	xdotool click {1,3,4,5}

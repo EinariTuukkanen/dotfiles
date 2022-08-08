@@ -3,7 +3,7 @@
 # Returns external monitor if one is connected.
 # Otherwise returns the default monitor.
 
-defaultMonitor=$(source ~/.config/scripts/get_default_monitor.sh)
+defaultMonitor=$(source ~/.scripts/get_default_monitor.sh)
 
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 primaryMonitor=$(source ${__dir}/get_monitor.sh)

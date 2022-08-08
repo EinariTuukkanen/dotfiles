@@ -44,7 +44,8 @@ xsetroot -cursor_name left_ptr
 # Start relevant applications
 sxhkd &
 flameshot &
-# fusuma -c /home/*USER*/.config/fusuma/config.yml &
+dunst &
+fusuma -c /home/*USER*/.config/fusuma/config.yml &
 # exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # xautolock -time 5 -locker "/home/*USER*/.config/scripts/lock.sh" -notify 30 -notifier "notify-send 'Locking in 30 seconds.' -t 5000" &
-# exec bspwm
+exec bspwm
