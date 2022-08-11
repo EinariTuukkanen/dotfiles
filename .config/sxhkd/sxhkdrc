@@ -16,6 +16,10 @@ super + Return
 super + shift + Return
 	kitty --class peek
 
+# terminal in last dir
+super + ctrl + Return
+	kitty `cat ~/.last_dir`
+
 # lockscreen
 super + l
     ~/.scripts/lock.sh
