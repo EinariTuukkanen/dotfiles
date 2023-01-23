@@ -1,127 +1,23 @@
 {
-  "rust-client.rustupPath": "/home/*USER*/.cargo/bin/rustup",
+  "workbench.colorTheme": "Neofloss",
   "editor.rulers": [80],
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "window.menuBarVisibility": "toggle",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
   "workbench.statusBar.visible": true,
-  "window.menuBarVisibility": "toggle",
-  "vetur.validation.templateProps": true,
-  "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.formatOnSave": true,
-  "vetur.experimental.templateInterpolationService": true,
-  "vetur.useWorkspaceDependencies": true,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "workbench.colorTheme": "Neofloss",
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
-  "terminal.integrated.fontFamily": "Fira Code",
-  // "python.venvPath": "/home/*USER*/.cache/pypoetry/virtualenvs",
-  "vetur.completion.tagCasing": "initial",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.defaultFormatter": "ms-python.python"
-  },
-  "vetur.validation.style": false,
   "workbench.colorCustomizations": {
     "[Neofloss]": {
       "tab.activeBorder": "#44D1B9",
       "tab.inactiveBackground": "#282529"
     }
-    // "notebook.cellHoverBackground": "#ff0000"
-  },
-  "bracket-pair-colorizer-2.colors": [
-    "#44D1B9",
-    "#8B70DA",
-    "#7497E6",
-    "#EA5594",
-    "#60C2E0",
-    "#D168D7"
-  ],
-  "bracket-pair-colorizer-2.unmatchedScopeColor": "#DA1173",
-  "gitlens.codeLens.enabled": false,
-  "gitlens.menus": {
-    "editor": {
-      "blame": false,
-      "clipboard": true,
-      "compare": true,
-      "history": false,
-      "remote": false
-    },
-    "editorGroup": {
-      "blame": true,
-      "compare": true
-    },
-    "explorer": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "scm": {
-      "authors": true
-    },
-    "scmGroupInline": {
-      "stash": true
-    },
-    "scmGroup": {
-      "compare": true,
-      "openClose": true,
-      "stash": true
-    },
-    "scmItem": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": false,
-      "stash": true
-    }
-  },
-  "python.formatting.autopep8Args": [
-    "--max-line-length",
-    "100",
-    "--experimental"
-  ],
-  "python.formatting.blackArgs": ["--line-length", "100"],
-  "workbench.editor.untitled.hint": "hidden",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "python.dataScience.askForKernelRestart": false,
-  "terminal.integrated.gpuAcceleration": "off",
-  "sshfs.configs": [
-    {
-      "name": "centos",
-      "host": "centos",
-      "username": "root",
-      // "privateKeyPath": "/home/*USER*/.ssh/id_rsa_centos",
-      "passphrase": "masters",
-      "root": "/root"
-    }
-  ],
-  "python.formatting.provider": "black"
+  }
 }

@@ -22,6 +22,7 @@ ruby
 sxhkd
 ufw
 wget
+telegram-desktop
 ttf-fira-code
 ttf-font-awesome
 ttf-iosevka-nerd
