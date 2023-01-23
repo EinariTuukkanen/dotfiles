@@ -1,3 +1,5 @@
 google-chrome
 i3lock-color
 ttf-font-awesome-4
+ruby-fusuma
+visual-studio-code-insiders-bin

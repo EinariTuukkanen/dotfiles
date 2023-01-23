@@ -14,6 +14,7 @@ pavucontrol
 pcmanfm
 polybar
 pulseaudio
+pyenv
 ripgrep
 rofi
 rsync
@@ -35,7 +36,10 @@ python
 python-pip
 openssh
 linux-firmware
+libinput
+xorg-xinput
 xf86-input-libinput
+lxsession
 
 
 # rust alternatives for shell tools

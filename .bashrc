@@ -76,6 +76,7 @@ alias grep='rg'
 alias find='fd'
 alias ps='procs'
 alias nano='micro'
+alias code='code-insiders'
 
 eval "$(pyenv init --path)"
 
@@ -85,4 +86,4 @@ export PATH="$PATH:$HOME/.local/bin"
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"

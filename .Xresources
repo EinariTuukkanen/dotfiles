@@ -1,4 +1,4 @@
-#include "/home/*USER*/.xcolors"
+#include "/home/einari/.xcolors"
 
 *.background:       #161014
 *.foreground:       #c15653
